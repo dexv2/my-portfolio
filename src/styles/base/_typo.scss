@@ -1,0 +1,61 @@
+body {
+    font-size: rem(map-get($typo, "size"));
+}
+
+body * {
+    font-family: '#{map-get($typo, "font")}';
+}
+
+.ml-typo {
+
+    &--highlight,
+    &--highlight * {
+        font-size: inherit;
+        font-family: '#{map-get($font, "overpass")}';
+        font-weight: 500;
+    }
+}
+
+.ml-title {
+
+    &--highlight,
+    &--highlight * {
+        font-size: inherit;
+        font-family: '#{map-get($font, "bruno")}';
+        font-weight: 400;
+    }
+
+    &--heading,
+    &--heading * {
+        font-size: rem(13);
+        font-family: '#{map-get($font, "bruno")}';
+        font-weight: 400;
+        text-wrap: nowrap;
+        font-style: normal;
+
+        @include screenSize('tablet') {
+            font-size: rem(16);
+        }
+
+        @include screenSize('desktop') {
+            font-size: rem(16);
+        }
+    }
+
+    &--heading:nth-child(even) {
+        @include TextGradient
+    }
+
+    &--card,
+    &--card * {
+        font-size: rem(20);
+        font-family: '#{map-get($font, "bruno")}';
+        font-weight: 400;
+        text-wrap: nowrap;
+        font-style: normal;
+    }
+
+    &--card:nth-last-child(1) {
+        @include TextGradient
+    }
+}

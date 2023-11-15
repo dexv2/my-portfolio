@@ -1,0 +1,78 @@
+.ml-notification-bar {
+  $notification: &;
+  position: relative;
+  z-index: 1;
+  height: rem(0);
+  overflow: hidden;
+  box-shadow: 0 0 rem(12) 0 $ui_color_header_shadow;
+  transition: all .3s ease 0s;
+
+  &__bg {
+    @include BackgroundGradient;
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 100%;
+    min-height: rem(50);
+    transition: all .3s ease 0s;
+  }
+
+  &__content {
+    display: block;
+    margin: 0 rem(50) 0 0;
+    padding: rem(15) rem(20);
+    max-width: 100%;
+    color: $ui_color_dropdown_arrow;
+    font-weight: 500;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: rem(20);
+    cursor: pointer;
+ 
+    @include screenSize('tablet') {
+      max-width: rem(1200);
+      margin: 0 rem(50);
+      padding: rem(15) rem(30);
+      text-align: center;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    z-index: 10;
+    top: rem(13);
+    right: rem(13);
+    width: rem(24);
+    height: rem(24);
+    cursor: pointer;
+ 
+    @include screenSize('tablet') {
+      right: rem(26);
+    }
+
+    path {
+      stroke: $ui_color_dropdown_arrow;
+      stroke-width: rem(3);
+      transition: all .3s ease 0s;
+    }
+
+    &:hover path {
+      stroke-width: rem(4);
+    }
+  }
+
+  &:hover {
+
+    #{$notification}__bg {
+      filter: brightness(1.2);
+    }
+  }
+
+  &--active {
+    height: rem(50);
+    transition: all .6s cubic-bezier(0.17,0.84,0.44,1) .6s;
+  }
+}

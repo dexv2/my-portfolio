@@ -1,0 +1,51 @@
+.ml-dropdown {
+  @include DropdownGradient;
+  position: absolute;
+  z-index: 100;
+  top: 100%;
+  left: 50%;
+  margin: rem(20) 0 0;
+  padding: rem(24);
+  width: rem(700);
+  max-width: 80vw;
+  max-height: 80vh;
+  border-radius: rem(10);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate3d(-50%, rem(10), 0);
+  transition: all .1s ease-in-out 0s;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: rem(-10);
+    width: 0; 
+    height: 0; 
+    border-left: rem(10) solid transparent;
+    border-right: rem(10) solid transparent;
+    border-bottom: rem(10) solid $ui_color_dropdown_arrow;
+    transform: translate3d(-50%, 0, 0);
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    right: 0;
+    top: rem(-20);
+    height: rem(20);
+  }
+
+  * {
+    color: $ui_color_dropdown;
+  }
+
+  &--active {
+    opacity: 1;
+    transform: translate3d(-50%, 0, 0);
+    pointer-events: all;
+  }
+}
