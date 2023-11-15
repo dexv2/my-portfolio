@@ -62,7 +62,7 @@ const MlMenuLink = (menupoint: MlMenuItemsProps) => {
                 {menupoint.icon}
               </i>
             } 
-            <span onClick={() => {console.log('slk')}} className='ml-menu__text'>
+            <span className='ml-menu__text'>
               {menupoint.title}
             </span>
           </span>
