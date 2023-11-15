@@ -31,12 +31,12 @@ function MlFrame({
         <meta property='og:description' content={description} />
         <meta property='og:type' content='website' />
         <meta property='og:site_name' content={title} />
-        <meta property='og:image' content='https://matrixlab.io/assets/icons/icon-512x512.png' />
-        <meta property='og:url' content='https://matrixlab.io/' />
+        <meta property='og:image' content='https://vermontpaguiligan.com/assets/icons/icon-512x512.png' />
+        <meta property='og:url' content='https://vermontpaguiligan.com/' />
         <meta name='twitter:title' content={title} />
         <meta name='twitter:description' content={description} />
-        <meta name='twitter:image' content='https://matrixlab.io/assets/icons/icon-512x512.png' />
-        <meta name='twitter:url' content='https://matrixlab.io/' />
+        <meta name='twitter:image' content='https://vermontpaguiligan.com/assets/icons/icon-512x512.png' />
+        <meta name='twitter:url' content='https://vermontpaguiligan.com/' />
         <meta name='twitter:card' content='summary' />
         <meta name='twitter:creator' content={title} />
       </Head>

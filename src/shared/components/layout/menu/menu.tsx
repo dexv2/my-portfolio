@@ -115,7 +115,7 @@ function MlMenu(): ReactElement {
       <div className={`ml-menu${isMobile ? ` ml-compact-dialog` : ``}${isMenuActive ? ` ml-compact-dialog--active` : ``}`}>
         <ul className={`ml-menu__list${isMobile ? ` ml-compact-dialog__content` : ``}`}>
           {menuItems.map((menupoint, index) =>
-            <li key={index} className={`ml-menu__item${menupoint.title === Translation.en.menupoint.community ? ` ml-helper__only-desktop` : ``}`}>   
+            <li key={index} className={`ml-menu__item${menupoint.title === Translation.en.menupoint.connect ? ` ml-helper__only-desktop` : ``}`}>   
               {menupoint.children && !isMobile ? 
                 <div {...(
                   isMobile ? 
