@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import Translation from '../../../data/translation';
-import FeatureSecurity from '../../../../assets/svg/visual/feature-security.svg';
+import SkillTesting from '../../../../assets/svg/visual/skill-testing.svg';
 import { animSlideOut, animSlideUp, animFadeIn } from '../../../config/anim';
 import { Em } from './features';
 
@@ -29,7 +29,7 @@ function MlFeatureSecurity(): ReactElement {
           </p>
         </div>
         <div className='ml-features__visual' {...animFadeIn()}>
-          <FeatureSecurity />
+          <SkillTesting />
         </div>
       </div>
     </div>

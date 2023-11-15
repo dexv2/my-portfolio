@@ -2,13 +2,9 @@ import React, { ReactElement } from 'react';
 
 import { ExternalRoutes } from '../../../pages/routes';
 import Translation from '../../../data/translation';
-import SocialTelegram from '../../../../assets/svg/social/telegram.svg';
-import SocialTwitter from '../../../../assets/svg/social/twitter.svg';
-import SocialDiscord from '../../../../assets/svg/social/discord.svg';
 import SocialLinkedIn from '../../../../assets/svg/social/linkedin.svg';
 import SocialGithub from '../../../../assets/svg/social/github.svg';
 import SocialGmail from '../../../../assets/svg/social/gmail.svg';
-import SocialMedium from '../../../../assets/svg/social/medium.svg';
 import { animSlideOut, animSlideUp } from '../../../config/anim';
 
 export type MlCommunityProps = { }
@@ -21,18 +17,6 @@ export type MlCommunityItem = {
 }
 
 const communityList: MlCommunityItem[] = [
-  // {
-  //   icon: <SocialTelegram />,
-  //   name: Translation.en.section.social.telegram.title,
-  //   description: Translation.en.section.social.telegram.description,
-  //   link: ExternalRoutes.Social.Telegram,
-  // },
-  // {
-  //   icon: <SocialTwitter />,
-  //   name: Translation.en.section.social.twitter.title,
-  //   description: Translation.en.section.social.twitter.description,
-  //   link: ExternalRoutes.Social.Twitter,
-  // },
   {
     icon: <SocialLinkedIn />,
     name: Translation.en.section.social.linkedin.title,
@@ -51,12 +35,6 @@ const communityList: MlCommunityItem[] = [
     description: Translation.en.section.social.gmail.description,
     link: ExternalRoutes.Social.Gmail,
   },
-  // {
-  //   icon: <SocialMedium />,
-  //   name: Translation.en.section.social.medium.title,
-  //   description: Translation.en.section.social.medium.description,
-  //   link: ExternalRoutes.Social.Medium,
-  // },
 ];
 
 function MlCommunity({ 

@@ -1,4 +1,4 @@
-import { ArrowBackIos, ArrowForwardIos } from '@mui/icons-material';
+import { ArrowForwardIos } from '@mui/icons-material';
 import { ButtonBase, useMediaQuery } from '@mui/material';
 import React, { ReactElement, useState } from 'react';
 

@@ -1,11 +1,8 @@
 import React, { Fragment, ReactElement, ReactNode } from 'react';
 import Head from 'next/head';
-
 import Translation from '../../../data/translation';
 import MlHeader from '../header/header';
 import MlFooter from '../footer/footer';
-import MlLaunchPanel from '../launch-panel/launch-panel';
-import MlNotificationBar from '../notification-bar/notification-bar';
 
 export enum MlSiteLayout {
   Landing = 'landing',
@@ -43,8 +40,6 @@ function MlFrame({
         <meta name='twitter:card' content='summary' />
         <meta name='twitter:creator' content={title} />
       </Head>
-      {/* <MlNotificationBar /> */}
-      <MlLaunchPanel />
       <div className={`ml-layout ${layout ? `ml-layout--${layout}` : ``}`}>
         <MlHeader />
         <main className='ml-layout__content'>

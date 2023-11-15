@@ -1,14 +1,9 @@
 import React, { ReactElement } from 'react';
 import { ButtonBase } from '@mui/material';
-
-// import * as ga from '../../../lib/google-analytics';
 import Translation from '../../../data/translation';
 import AppSwap from '../../../../assets/svg/visual/app-swap.svg';
 import AppPerp from '../../../../assets/svg/visual/app-perp.svg';
-import AppZap from '../../../../assets/svg/visual/app-zap.svg';
-import MatrixSwapLogo from '../../../../assets/svg/logo/matrix-swap-white-text-logo.svg';
-import MatrixPerpLogo from '../../../../assets/svg/logo/matrix-perp-white-text-logo.svg';
-import MatrixZapLogo from '../../../../assets/svg/logo/matrix-zap-white-text-logo.svg';
+import AppEscrow from '../../../../assets/svg/visual/app-escrow.svg';
 import { ExternalRoutes } from '../../../pages/routes';
 import { animSlideOut, animSlideUp } from '../../../config/anim';
 
@@ -56,7 +51,7 @@ function MlApps({
     {
       active: true,
       icon: <AppSwap />,
-      logo: <MlAppTitle content="MATRIX SWAP"/>,
+      logo: <MlAppTitle content={Translation.en.projects.swap}/>,
       name: Translation.en.section.apps.swap.title,
       description: Translation.en.section.apps.swap.description,
       actionText: Translation.en.section.apps.swap.action,
@@ -65,7 +60,7 @@ function MlApps({
     {
       active: true,
       icon: <AppPerp />,
-      logo: <MlAppTitle content="MATRIX PERP"/>,
+      logo: <MlAppTitle content={Translation.en.projects.perp}/>,
       name: Translation.en.section.apps.perp.title,
       description: Translation.en.section.apps.perp.description,
       actionText: Translation.en.section.apps.perp.action,
@@ -73,8 +68,8 @@ function MlApps({
     },
     {
       active: true,
-      icon: <AppZap />,
-      logo: <MlAppTitle content="ESCROW PAYMENT"/>,
+      icon: <AppEscrow />,
+      logo: <MlAppTitle content={Translation.en.projects.escrow}/>,
       name: Translation.en.section.apps.escrow.title,
       description: Translation.en.section.apps.escrow.description,
       actionText: Translation.en.section.apps.escrow.action,

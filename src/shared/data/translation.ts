@@ -19,6 +19,17 @@ export const Translation = {
       subscribed: `Subscribed!`,
       download: `Download my CV`,
     },
+    label: {
+      my: `MY`,
+      portfolio: `PORTFOLIO`,
+      fname: `VERMONT PHIL`,
+      lname: `PAGUILIGAN`
+    },
+    projects: {
+      swap: `MATRIX SWAP`,
+      perp: `MATRIX PERP`,
+      escrow: `ESCROW PAYMENT`
+    },
     error: {
       emptyEmail: `Input is empty`,
       invalidEmail: `Input is not an email`,
@@ -182,9 +193,6 @@ export const Translation = {
       },
       advisors: {
         title: `Advisors`,
-      },
-      notificationBar: {
-        text: `MatrixPerp | Mainnet is LIVE!  | Trade Perpetuals With Up to 10x Leverage | Trade Now`,
       },
       launchpad: {
         title: `MatrixVerse Launchpad`,

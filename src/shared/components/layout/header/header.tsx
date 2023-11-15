@@ -1,24 +1,13 @@
 import React, { ReactElement, useEffect } from 'react';
 import { ButtonBase } from '@mui/material';
 import Link from 'next/link';
-
 import MlMenu from '../menu/menu';
 import Translation from '../../../data/translation';
-import MatrixLabsIcon from '../../../../assets/svg/logo/matrixlabs-icon.svg';
 import VLogo from '../../../../assets/svg/logo/v-logo.svg';
-import MatrixLabsTextMatrix from '../../../../assets/svg/logo/matrixlabs-matrix.svg';
-import MatrixLabsTextLabs from '../../../../assets/svg/logo/matrixlabs-labs.svg';
 import { animFadeIn } from '../../../config/anim';
 import { ExternalRoutes, Routes } from '../../../pages/routes';
-import { useLaunchPanel } from '../../../context/launch-panel.context';
-import { useNotificationBar } from '../../../context/notification-bar.context';
 
-export interface MlHeaderProps { }
-
-function MlHeader({
-  ...props
-}: MlHeaderProps): ReactElement {
-
+function MlHeader(): ReactElement {
   useEffect(() => {
     window.addEventListener('scroll', isSticky);
     return () => {
@@ -58,13 +47,13 @@ function MlHeader({
                 <VLogo className='ml-header__logo__svg ml-header__logo__svg--icon' aria-label={Translation.en.meta.title} />
                 <span className='ml-header__logo__no-width'>
                   <span className='ml-header__logo__hide-narrow ml-header__logo__hide-narrow--portfolio'>
-                    <h1 className='ml-title--heading ml-header__logo__svg--text-my'>MY</h1>
-                    <h1 className='ml-title--heading ml-header__logo__svg--text-portfolio'>PORTFOLIO</h1>
+                    <h1 className='ml-title--heading ml-header__logo__svg--text-my'>{Translation.en.label.my}</h1>
+                    <h1 className='ml-title--heading ml-header__logo__svg--text-portfolio'>{Translation.en.label.portfolio}</h1>
                   </span>
                 </span>
                 <span className='ml-header__logo__hide-narrow ml-header__logo__hide-narrow--name'>
-                  <h1 className='ml-title--heading ml-header__logo__svg--text-vermont'>VERMONT PHIL</h1>
-                  <h1 className='ml-title--heading ml-header__logo__svg--text-paguiligan'>PAGUILIGAN</h1>
+                  <h1 className='ml-title--heading ml-header__logo__svg--text-vermont'>{Translation.en.label.fname}</h1>
+                  <h1 className='ml-title--heading ml-header__logo__svg--text-paguiligan'>{Translation.en.label.lname}</h1>
                 </span>
               </div>
             </Link>

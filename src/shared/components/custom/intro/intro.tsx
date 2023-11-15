@@ -4,11 +4,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Translation from '../../../data/translation';
 import IntroVisual from '../../../../assets/svg/visual/intro.svg';
-import IntroSpiral from '../../../../assets/image/visual/intro-spiral.png';
+import IntroSpiral from '../../../../assets/image/visual/intro.png';
 import Arrow from '../../../../assets/svg/icon/arrow.svg';
 import { ExternalRoutes } from '../../../pages/routes';
 import { animZoomOut, animFadeIn } from '../../../config/anim';
-import { useLaunchPanel } from '../../../context/launch-panel.context';
 
 export type MlIntroProps = {
   userAgent: string;
@@ -18,12 +17,6 @@ function MlIntro({
   userAgent,
   ...props 
 }: MlIntroProps): ReactElement {
-
-  const {activeLP, setActiveLP} = useLaunchPanel();
-
-  const launchApp = () => {
-    setActiveLP(!activeLP);
-  }
 
   function goToGithub() {
     window.open(ExternalRoutes.Social.Github, `_blank`);

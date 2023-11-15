@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import Translation from '../../../data/translation';
-import FeatureSwap from '../../../../assets/svg/visual/feature-swap.svg';
+import SkillBlockchain from '../../../../assets/svg/visual/skill-blockchain.svg';
 import { animSlideOut, animSlideUp, animFadeIn } from '../../../config/anim';
 import { Em } from './features';
 
@@ -30,7 +30,7 @@ function MlFeatureSwap(): ReactElement {
           </p>
         </div>
         <div className='ml-features__visual' {...animFadeIn()}>
-          <FeatureSwap />
+          <SkillBlockchain />
         </div>
       </div>
     </div>
