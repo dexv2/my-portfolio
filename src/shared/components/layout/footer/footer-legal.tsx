@@ -2,7 +2,7 @@ import React, { Fragment, ReactElement } from 'react';
 import Translation from '../../../data/translation';
 import { animSlideDown } from '../../../config/anim';
 
-function MlFooterLegal(): ReactElement {
+function VpFooterLegal(): ReactElement {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -16,4 +16,4 @@ function MlFooterLegal(): ReactElement {
   );
 }
 
-export default MlFooterLegal;
+export default VpFooterLegal;

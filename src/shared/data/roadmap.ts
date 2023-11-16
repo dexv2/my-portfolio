@@ -1,7 +1,7 @@
 import Translation from './translation';
-import { MlMilestonesGroup } from '../components/custom/roadmap/roadmap';
+import { VpMilestonesGroup } from '../components/custom/roadmap/roadmap';
 
-export type MlMilestonesItem = {
+export type VpMilestonesItem = {
   name: string;
   status?: MilestoneStatus;
 }
@@ -11,7 +11,7 @@ export enum MilestoneStatus {
   Planned = `planned`,
 }
 
-export const Milestones: MlMilestonesGroup[] = [
+export const Milestones: VpMilestonesGroup[] = [
   {
     groupName: `06/2020 - 02/2021`,
     groupTitle: `Joined Bitcapp`,

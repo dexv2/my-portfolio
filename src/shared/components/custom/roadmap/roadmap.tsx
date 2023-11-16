@@ -4,22 +4,22 @@ import React, { ReactElement, useState } from 'react';
 
 import Translation from '../../../data/translation';
 import { animSlideOut, animSlideUp } from '../../../config/anim';
-import { Milestones, MilestoneStatus, MlMilestonesItem } from '../../../data/roadmap';
+import { Milestones, MilestoneStatus, VpMilestonesItem } from '../../../data/roadmap';
 
-export type MlRoadmapProps = { }
+export type VpRoadmapProps = { }
 
-export type MlMilestonesGroup = {
+export type VpMilestonesGroup = {
   index?: number;
   active?: number;
   groupName: string; 
   groupTitle: string; 
   groupPosition: string; 
-  groupItems: MlMilestonesItem[];
+  groupItems: VpMilestonesItem[];
 }
 
 const DEFAULT_MILESTONE_GROUP_INDEX = 2;
 
-const MlMilestoneGroup = (group: MlMilestonesGroup) => {
+const VpMilestoneGroup = (group: VpMilestonesGroup) => {
   const groupIndex = group.index || 0;
   return (
     <div className={`
@@ -47,7 +47,7 @@ const MlMilestoneGroup = (group: MlMilestonesGroup) => {
         </div>
         <ul className='vp-roadmap__milestones__list'>
           {group.groupItems.map((item, index) =>
-            <MlMilestoneItem key={index} {...item} />
+            <VpMilestoneItem key={index} {...item} />
           )}
         </ul>
       </div>
@@ -55,7 +55,7 @@ const MlMilestoneGroup = (group: MlMilestonesGroup) => {
   )
 };
 
-const MlMilestoneItem = (item: MlMilestonesItem) => {
+const VpMilestoneItem = (item: VpMilestonesItem) => {
   return (
     <li className='vp-roadmap__milestones__item'>
       <i className={`
@@ -72,9 +72,9 @@ const MlMilestoneItem = (item: MlMilestonesItem) => {
   )
 };
 
-function MlRoadmap({ 
+function VpRoadmap({ 
   ...props 
-}: MlRoadmapProps): ReactElement {
+}: VpRoadmapProps): ReactElement {
 
   const [ activeGroup, setActiveGroup ] = useState(DEFAULT_MILESTONE_GROUP_INDEX);
   const desktopOrBigger = useMediaQuery('(min-width:1110px)');
@@ -155,7 +155,7 @@ function MlRoadmap({
                 style={{right: `${(activeGroup - (desktopOrBigger ? 1 : 0)) * (desktopOrBigger ? 50 : 100)}%` }}
               >
                 {Milestones.map((group, index) =>
-                  <MlMilestoneGroup key={index} index={index} active={activeGroup} {...group} />
+                  <VpMilestoneGroup key={index} index={index} active={activeGroup} {...group} />
                 )}
               </div>
             </div>
@@ -166,4 +166,4 @@ function MlRoadmap({
   );
 }
 
-export default MlRoadmap;
+export default VpRoadmap;

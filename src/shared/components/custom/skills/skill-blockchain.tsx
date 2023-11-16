@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react';
 import Translation from '../../../data/translation';
 import SkillBlockchain from '../../../../assets/svg/visual/skill-blockchain.svg';
 import { animSlideOut, animSlideUp, animFadeIn } from '../../../config/anim';
-import { Em } from './features';
+import { Em } from './skills';
 
 function SkillDescription() {
   return (
@@ -17,19 +17,19 @@ function SkillDescription() {
   )
 }
 
-function MlFeatureSwap(): ReactElement {
+function VpSkillBlockchain(): ReactElement {
   return (
-    <div className='vp-section vp-features vp-feature-swap' data-aos='fade-in'>
-      <div className='vp-section__wrap vp-features__content'>
-        <div className='vp-features__box' {...animSlideUp()}>
-          <h2 className='vp-section__title vp-features__title' {...animSlideOut()}>
+    <div className='vp-section vp-skills' data-aos='fade-in'>
+      <div className='vp-section__wrap vp-skills__content'>
+        <div className='vp-skills__box' {...animSlideUp()}>
+          <h2 className='vp-section__title vp-skills__title' {...animSlideOut()}>
             {Translation.en.section.skills.blockchain.title}
           </h2>
-          <p className='vp-features__description'>
+          <p className='vp-skills__description'>
             <SkillDescription />
           </p>
         </div>
-        <div className='vp-features__visual' {...animFadeIn()}>
+        <div className='vp-skills__visual' {...animFadeIn()}>
           <SkillBlockchain />
         </div>
       </div>
@@ -37,4 +37,4 @@ function MlFeatureSwap(): ReactElement {
   );
 }
 
-export default MlFeatureSwap;
+export default VpSkillBlockchain;

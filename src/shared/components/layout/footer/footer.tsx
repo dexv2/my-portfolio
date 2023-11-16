@@ -1,27 +1,27 @@
 import React, { Fragment, ReactElement, ReactNode } from 'react';
-import MlFooterLegal from './footer-legal';
+import VpFooterLegal from './footer-legal';
 
-export interface MlFooterProps { }
+export interface VpFooterProps { }
 
-export interface MlFooterItemsProps {
+export interface VpFooterItemsProps {
   title: string;
   link?: string;
   icon?: ReactNode | undefined;
-  children?: MlFooterItemsProps[];
+  children?: VpFooterItemsProps[];
 }
 
-function MlFooter(): ReactElement {
+function VpFooter(): ReactElement {
   return (
     <Fragment>
       <div className='vp-section vp-footer' data-aos='fade-in'>
       </div>
       <div className='vp-section vp-footer-bottom' data-aos='fade-in'>
         <div className='vp-section__wrap vp-footer-bottom__content'>  
-          <MlFooterLegal />
+          <VpFooterLegal />
         </div>
       </div>
     </Fragment>
   );
 }
 
-export default MlFooter;
+export default VpFooter;

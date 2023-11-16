@@ -1,12 +1,12 @@
 import React from 'react'
 import type { NextPage } from 'next'
-import MlFrame from '../../components/layout/frame/frame'
-import MlApps from '../../components/custom/apps/apps'
-import MlIntro from '../../components/custom/intro/intro'
-import MlFeatures from '../../components/custom/features/features'
-import MlVision from '../../components/custom/vision/vision'
-import MlRoadmap from '../../components/custom/roadmap/roadmap'
-import MlCommunity from '../../components/custom/community/community'
+import VpFrame from '../../components/layout/frame/frame'
+import VpApps from '../../components/custom/apps/apps'
+import VpIntro from '../../components/custom/intro/intro'
+import VpSkills from '../../components/custom/skills/skills'
+import VpAbout from '../../components/custom/about/about'
+import VpRoadmap from '../../components/custom/roadmap/roadmap'
+import VpConnect from '../../components/custom/connect/connect'
 
 export interface HomeProps {
   userAgent: string;
@@ -14,14 +14,14 @@ export interface HomeProps {
 
 export const Home: NextPage<HomeProps> = ({ userAgent }) => {
   return (
-    <MlFrame>
-      <MlIntro {...{userAgent}}></MlIntro>
-      <MlApps></MlApps>
-      <MlFeatures></MlFeatures>
-      <MlVision></MlVision>
-      <MlRoadmap></MlRoadmap>
-      <MlCommunity></MlCommunity>
-    </MlFrame>
+    <VpFrame>
+      <VpIntro {...{userAgent}}></VpIntro>
+      <VpApps></VpApps>
+      <VpSkills></VpSkills>
+      <VpAbout></VpAbout>
+      <VpRoadmap></VpRoadmap>
+      <VpConnect></VpConnect>
+    </VpFrame>
   )
 }
 

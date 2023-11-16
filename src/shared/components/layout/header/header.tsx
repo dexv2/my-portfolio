@@ -1,13 +1,13 @@
 import React, { ReactElement, useEffect } from 'react';
 import { ButtonBase } from '@mui/material';
 import Link from 'next/link';
-import MlMenu from '../menu/menu';
+import VpMenu from '../menu/menu';
 import Translation from '../../../data/translation';
 import VLogo from '../../../../assets/svg/logo/v-logo.svg';
 import { animFadeIn } from '../../../config/anim';
 import { ExternalRoutes, Routes } from '../../../pages/routes';
 
-function MlHeader(): ReactElement {
+function VpHeader(): ReactElement {
   useEffect(() => {
     window.addEventListener('scroll', isSticky);
     return () => {
@@ -59,7 +59,7 @@ function MlHeader(): ReactElement {
             </Link>
           </div>
           <div className='vp-header__menu'{...animFadeIn()}>
-            <MlMenu />
+            <VpMenu />
           </div>
           <div className='vp-header__action'>
             <ButtonBase 
@@ -74,4 +74,4 @@ function MlHeader(): ReactElement {
   );
 }
 
-export default MlHeader;
+export default VpHeader;

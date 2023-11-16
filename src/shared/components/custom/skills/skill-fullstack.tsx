@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react';
 import Translation from '../../../data/translation';
 import SkillFullStack from '../../../../assets/svg/visual/skill-fullstack.svg';
 import { animSlideOut, animSlideUp, animFadeIn } from '../../../config/anim';
-import { Em } from './features';
+import { Em } from './skills';
 
 function SkillDescription() {
   return (
@@ -17,19 +17,19 @@ function SkillDescription() {
   )
 }
 
-function MlFeaturePerp(): ReactElement {
+function VpSkillFullStack(): ReactElement {
   return (
-    <div id='skills' className='vp-section vp-features vp-features--right vp-feature-perp' data-aos='fade-in'>
-      <div className='vp-section__wrap vp-features__content'>
-        <div className='vp-features__box' {...animSlideUp()}>
-          <h2 className='vp-section__title vp-features__title' {...animSlideOut()}>
+    <div id='skills' className='vp-section vp-skills vp-skills--right' data-aos='fade-in'>
+      <div className='vp-section__wrap vp-skills__content'>
+        <div className='vp-skills__box' {...animSlideUp()}>
+          <h2 className='vp-section__title vp-skills__title' {...animSlideOut()}>
             {Translation.en.section.skills.fullStack.title}
           </h2>
-          <p className='vp-features__description'>
+          <p className='vp-skills__description'>
             <SkillDescription />
           </p>
         </div>
-        <div className='vp-features__visual' {...animFadeIn()}>
+        <div className='vp-skills__visual' {...animFadeIn()}>
           <SkillFullStack />
         </div>
       </div>
@@ -37,4 +37,4 @@ function MlFeaturePerp(): ReactElement {
   );
 }
 
-export default MlFeaturePerp;
+export default VpSkillFullStack;

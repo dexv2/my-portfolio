@@ -133,39 +133,39 @@
       box-shadow: 0 0 rem(15) 0 $ui_color_block_shadow_alt;
       
       &--telegram {
-        @include CommunityColor('telegram');
+        @include ConnectColor('telegram');
       }
   
       &--twitter {
-        @include CommunityColor('twitter');
+        @include ConnectColor('twitter');
       }
   
       &--discord {
-        @include CommunityColor('discord');
+        @include ConnectColor('discord');
       }
   
       &--github {
-        @include CommunityColor('github');
+        @include ConnectColor('github');
       }
   
       &--medium {
-        @include CommunityColor('medium');
+        @include ConnectColor('medium');
       }
   
       &--blog {
-        @include CommunityColor('blog');
+        @include ConnectColor('blog');
       }
   
       &--announcement {
-        @include CommunityColor('announcement');
+        @include ConnectColor('announcement');
       }
   
       &--whitepaper {
-        @include CommunityColor('whitepaper');
+        @include ConnectColor('whitepaper');
       }
   
       &--buy {
-        @include CommunityColor('buy');
+        @include ConnectColor('buy');
       }
     }
 

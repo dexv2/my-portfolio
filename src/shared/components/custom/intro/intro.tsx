@@ -9,14 +9,14 @@ import Arrow from '../../../../assets/svg/icon/arrow.svg';
 import { ExternalRoutes } from '../../../pages/routes';
 import { animZoomOut, animFadeIn } from '../../../config/anim';
 
-export type MlIntroProps = {
+export type VpIntroProps = {
   userAgent: string;
 }
 
-function MlIntro({ 
+function VpIntro({ 
   userAgent,
   ...props 
-}: MlIntroProps): ReactElement {
+}: VpIntroProps): ReactElement {
 
   function goToGithub() {
     window.open(ExternalRoutes.Social.Github, `_blank`);
@@ -65,4 +65,4 @@ function MlIntro({
   );
 }
 
-export default MlIntro;
+export default VpIntro;

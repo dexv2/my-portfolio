@@ -9,16 +9,16 @@ import Indicator from '../../../../assets/svg/icon/indicator.svg';
 
 declare type Url = string | UrlObject;
 
-export interface MlMenuItemsProps {
+export interface VpMenuItemsProps {
   title: string;
   alias?: string;
   link?: string | Url;
   linkType?: `internal` | `external`;
   icon?: ReactNode | undefined;
-  children?: MlMenuItemsProps[];
+  children?: VpMenuItemsProps[];
 }
 
-const menuItems: MlMenuItemsProps[] = [
+const menuItems: VpMenuItemsProps[] = [
   {
     title: Translation.en.menupoint.home,
     link: Routes.Menu.Home,
@@ -51,7 +51,7 @@ const menuItems: MlMenuItemsProps[] = [
   },
 ];
 
-const MlMenuLink = (menupoint: MlMenuItemsProps) => {
+const VpMenuLink = (menupoint: VpMenuItemsProps) => {
   return (
     <Fragment>
       {menupoint.link && menupoint.linkType === `internal` ?
@@ -88,7 +88,7 @@ const MlMenuLink = (menupoint: MlMenuItemsProps) => {
   )
 };
 
-function MlMenu(): ReactElement {
+function VpMenu(): ReactElement {
   const isMobile = !useMediaQuery(`(min-width:768px)`);
   const [isMenuActive, setMenuActive] = useState<boolean>(false);
   const [anchorEl, setAnchorEl] = useState<{[index: number]: EventTarget & HTMLElement} | null>(null);
@@ -147,7 +147,7 @@ function MlMenu(): ReactElement {
                             onClick={handleClose} 
                             className='vp-menu__subitem'
                           >
-                            <MlMenuLink {...subMenupoint} />
+                            <VpMenuLink {...subMenupoint} />
                           </li>
                         )}
                       </ul>
@@ -155,7 +155,7 @@ function MlMenu(): ReactElement {
                   </ClickAwayListener>
                 </div>
               :
-                <MlMenuLink {...menupoint} />
+                <VpMenuLink {...menupoint} />
               }
             </li>
           )}
@@ -169,7 +169,7 @@ function MlMenu(): ReactElement {
                       onClick={handleClose} 
                       className='vp-menu__subitem'
                     >
-                      <MlMenuLink {...subMenupoint} />
+                      <VpMenuLink {...subMenupoint} />
                     </li>
                   )}
                 </ul>
@@ -182,4 +182,4 @@ function MlMenu(): ReactElement {
   );
 }
 
-export default MlMenu;
+export default VpMenu;

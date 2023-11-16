@@ -7,9 +7,9 @@ import AppEscrow from '../../../../assets/svg/visual/app-escrow.svg';
 import { ExternalRoutes } from '../../../pages/routes';
 import { animSlideOut, animSlideUp } from '../../../config/anim';
 
-export type MlAppsProps = { }
+export type VpAppsProps = { }
 
-export type MlAppItem = {
+export type VpAppItem = {
   active: boolean;
   index?: number;
   icon: ReactElement;
@@ -20,7 +20,7 @@ export type MlAppItem = {
   actionFunction: () => void,
 }
 
-const MlApp = ({index = 0, ...item}: MlAppItem) => {
+const VpApp = ({index = 0, ...item}: VpAppItem) => {
   return (
     <li className='vp-apps__item' {...animSlideUp()}>
       <div className='vp-card vp-apps__card' onClick={item.actionFunction}>
@@ -43,15 +43,15 @@ const MlApp = ({index = 0, ...item}: MlAppItem) => {
   )
 };
 
-function MlApps({ 
+function VpApps({ 
   ...props 
-}: MlAppsProps): ReactElement {
+}: VpAppsProps): ReactElement {
 
-  const appList: MlAppItem[] = [
+  const appList: VpAppItem[] = [
     {
       active: true,
       icon: <AppSwap />,
-      logo: <MlAppTitle content={Translation.en.projects.swap}/>,
+      logo: <VpAppTitle content={Translation.en.projects.swap}/>,
       name: Translation.en.section.apps.swap.title,
       description: Translation.en.section.apps.swap.description,
       actionText: Translation.en.section.apps.swap.action,
@@ -60,7 +60,7 @@ function MlApps({
     {
       active: true,
       icon: <AppPerp />,
-      logo: <MlAppTitle content={Translation.en.projects.perp}/>,
+      logo: <VpAppTitle content={Translation.en.projects.perp}/>,
       name: Translation.en.section.apps.perp.title,
       description: Translation.en.section.apps.perp.description,
       actionText: Translation.en.section.apps.perp.action,
@@ -69,7 +69,7 @@ function MlApps({
     {
       active: true,
       icon: <AppEscrow />,
-      logo: <MlAppTitle content={Translation.en.projects.escrow}/>,
+      logo: <VpAppTitle content={Translation.en.projects.escrow}/>,
       name: Translation.en.section.apps.escrow.title,
       description: Translation.en.section.apps.escrow.description,
       actionText: Translation.en.section.apps.escrow.action,
@@ -99,7 +99,7 @@ function MlApps({
           </h2>
           <ul className='vp-apps__list'>
             {appList.map((appItem, index) => 
-              <MlApp key={index} index={index} {...appItem} />
+              <VpApp key={index} index={index} {...appItem} />
             )}
           </ul>
         </div>
@@ -108,7 +108,7 @@ function MlApps({
   );
 }
 
-function MlAppTitle(props: {content: string}) {
+function VpAppTitle(props: {content: string}) {
   const title: string[] = props.content.split(" ");
   return (
     <div className='title-container'>
@@ -119,4 +119,4 @@ function MlAppTitle(props: {content: string}) {
   );
 }
 
-export default MlApps;
+export default VpApps;

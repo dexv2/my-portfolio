@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react';
 import Translation from '../../../data/translation';
 import SkillTesting from '../../../../assets/svg/visual/skill-testing.svg';
 import { animSlideOut, animSlideUp, animFadeIn } from '../../../config/anim';
-import { Em } from './features';
+import { Em } from './skills';
 
 function SkillDescription() {
   return (
@@ -16,19 +16,19 @@ function SkillDescription() {
   )
 }
 
-function MlFeatureSecurity(): ReactElement {
+function VpSkillTesting(): ReactElement {
   return (
-    <div className='vp-section vp-features vp-features--right vp-feature-security' data-aos='fade-in'>
-      <div className='vp-section__wrap vp-features__content'>
-        <div className='vp-features__box' {...animSlideUp()}>
-          <h2 className='vp-section__title vp-features__title' {...animSlideOut()}>
+    <div className='vp-section vp-skills vp-skills--right vp-skill-testing' data-aos='fade-in'>
+      <div className='vp-section__wrap vp-skills__content'>
+        <div className='vp-skills__box' {...animSlideUp()}>
+          <h2 className='vp-section__title vp-skills__title' {...animSlideOut()}>
             {Translation.en.section.skills.testing.title}
           </h2>
-          <p className='vp-features__description'>
+          <p className='vp-skills__description'>
             <SkillDescription />
           </p>
         </div>
-        <div className='vp-features__visual' {...animFadeIn()}>
+        <div className='vp-skills__visual' {...animFadeIn()}>
           <SkillTesting />
         </div>
       </div>
@@ -36,4 +36,4 @@ function MlFeatureSecurity(): ReactElement {
   );
 }
 
-export default MlFeatureSecurity;
+export default VpSkillTesting;

@@ -247,7 +247,7 @@ $socialBackground: (
   background: map-get($socialBackground, $social);
 }
 
-$communityColor: (
+$connectColor: (
   'telegram': hsla(198, 73%, 53%, 1),
   'twitter': hsla(200, 68%, 55%, 1),
   'discord': hsla(235, 86%, 65%, 1),
@@ -259,7 +259,7 @@ $communityColor: (
   'buy': hsla(145, 85%, 50%, 1),
 );
 
-@mixin CommunityColor($social: 'telegram') {
-  background: map-get($communityColor, $social);
-  box-shadow: 0 0 rem(10) 0 color.adjust(map-get($communityColor, $social), $alpha: -0.8);
+@mixin ConnectColor($social: 'telegram') {
+  background: map-get($connectColor, $social);
+  box-shadow: 0 0 rem(10) 0 color.adjust(map-get($connectColor, $social), $alpha: -0.8);
 }

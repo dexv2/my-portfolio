@@ -1,26 +1,26 @@
 import React, { Fragment, ReactElement, ReactNode } from 'react';
 import Head from 'next/head';
 import Translation from '../../../data/translation';
-import MlHeader from '../header/header';
-import MlFooter from '../footer/footer';
+import VpHeader from '../header/header';
+import VpFooter from '../footer/footer';
 
-export enum MlSiteLayout {
+export enum VpSiteLayout {
   Landing = 'landing',
 }
 
-export interface MlFrameProps {
+export interface VpFrameProps {
   children: ReactNode | undefined,
   title?: string;
   description?: string;
-  layout?: MlSiteLayout,
+  layout?: VpSiteLayout,
 }
 
-function MlFrame({
+function VpFrame({
   title = Translation.en.meta.title,
   description = Translation.en.meta.description,
-  layout = MlSiteLayout.Landing,
+  layout = VpSiteLayout.Landing,
   ...props
-}: MlFrameProps): ReactElement {
+}: VpFrameProps): ReactElement {
   return (
     <Fragment>
       <Head>
@@ -41,14 +41,14 @@ function MlFrame({
         <meta name='twitter:creator' content={title} />
       </Head>
       <div className={`vp-layout ${layout ? `vp-layout--${layout}` : ``}`}>
-        <MlHeader />
+        <VpHeader />
         <main className='vp-layout__content'>
           {props.children}
         </main>
-        <MlFooter />
+        <VpFooter />
       </div>
     </Fragment>
   );
 }
 
-export default MlFrame;
+export default VpFrame;

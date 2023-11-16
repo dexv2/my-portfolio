@@ -32,7 +32,6 @@ export const Translation = {
       experience: `Experience`,
       about: `About`,
       connect: `Connect`,
-      community: `Community`,
     },
     footer: {
       copyright: `Copyright`,
@@ -44,7 +43,7 @@ export const Translation = {
         description: `A Full-Stack Blockchain Engineer`,
       },
       apps: {
-        title: `Browse through my projects`,
+        title: `Browse Through My Projects`,
         swap: {
           title: `MatrixSwap`,
           description: `Swap & trade on Polygon, BSC, Arbitrum, and 6 other blockchains.`,
@@ -102,7 +101,7 @@ export const Translation = {
           item5: `Innovated the development of an AMM with Swap, Pool, Staking, and Yield Farming functionalities, significantly diversifying decentralized finance offerings by 25%. `,
         },
       },
-      community: {
+      connect: {
         title: `Let's Get Connected`,
       },
       social: {

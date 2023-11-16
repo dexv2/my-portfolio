@@ -1,5 +1,5 @@
-.vp-features {
-  $feature: &;
+.vp-skills {
+  $skill: &;
 
   &__content {
     display: flex;
@@ -124,11 +124,11 @@
 
   &--right {
 
-    #{$feature}__box {
+    #{$skill}__box {
       order: 2;
     }
 
-    #{$feature}__visual {
+    #{$skill}__visual {
       order: 1;
  
       @include screenSize('tablet') {
@@ -137,9 +137,9 @@
     }
   }
 }
-.vp-feature-security {
+.vp-skill-testing {
 
-  .vp-features__visual > * {
+  .vp-skills__visual > * {
     max-width: rem(428);
   }
 }
