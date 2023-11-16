@@ -1,11 +1,11 @@
-import React, { Fragment, ReactElement, ReactNode, useState } from 'react';
-import { ClickAwayListener, useMediaQuery } from '@mui/material';
+import React, { Fragment, ReactElement, ReactNode, createContext, useContext, useState } from 'react';
+import { useMediaQuery } from '@mui/material';
 import { UrlObject } from 'url';
 import Link from 'next/link';
-
 import Translation from '../../../data/translation';
 import { Routes } from '../../../pages/routes';
-import Indicator from '../../../../assets/svg/icon/indicator.svg';
+
+const MenuContext = createContext({isMobile: false, closeDialog: () => {}});
 
 declare type Url = string | UrlObject;
 
@@ -52,6 +52,11 @@ const menuItems: VpMenuItemsProps[] = [
 ];
 
 const VpMenuLink = (menupoint: VpMenuItemsProps) => {
+  const { isMobile, closeDialog } = useContext(MenuContext)
+  function closeDialogOnMobile() {
+    if (isMobile) closeDialog()
+  }
+
   return (
     <Fragment>
       {menupoint.link && menupoint.linkType === `internal` ?
@@ -62,7 +67,7 @@ const VpMenuLink = (menupoint: VpMenuItemsProps) => {
                 {menupoint.icon}
               </i>
             } 
-            <span className='vp-menu__text'>
+            <span onClick={closeDialogOnMobile} className='vp-menu__text'>
               {menupoint.title}
             </span>
           </span>
@@ -91,16 +96,9 @@ const VpMenuLink = (menupoint: VpMenuItemsProps) => {
 function VpMenu(): ReactElement {
   const isMobile = !useMediaQuery(`(min-width:768px)`);
   const [isMenuActive, setMenuActive] = useState<boolean>(false);
-  const [anchorEl, setAnchorEl] = useState<{[index: number]: EventTarget & HTMLElement} | null>(null);
-  const handleMouseOver = (index: number, event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl({ [index]: event.currentTarget });
-  };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
 
   return (
-    <Fragment>
+    <MenuContext.Provider value={{isMobile, closeDialog: () => setMenuActive(false)}}>
       {isMobile &&
         <div 
           className={`vp-menu-button${isMenuActive ? ` vp-menu-button--active` : ``}`}
@@ -115,70 +113,15 @@ function VpMenu(): ReactElement {
       <div className={`vp-menu${isMobile ? ` vp-compact-dialog` : ``}${isMenuActive ? ` vp-compact-dialog--active` : ``}`}>
         <ul className={`vp-menu__list${isMobile ? ` vp-compact-dialog__content` : ``}`}>
           {menuItems.map((menupoint, index) =>
-            <li key={index} className={`vp-menu__item${menupoint.title === Translation.en.menupoint.connect ? ` vp-helper__only-desktop` : ``}`}>   
-              {menupoint.children && !isMobile ? 
-                <div {...(
-                  isMobile ? 
-                  {onClick: (e) => handleMouseOver(index, e)} :
-                  {onMouseOver: (e) => handleMouseOver(index, e)}
-                )}>
-                  <span className='vp-menu__link' {...(
-                    !isMobile && 
-                    {onMouseLeave: handleClose}
-                  )}>
-                    <span className='vp-menu__text'>
-                      {menupoint.title}
-                    </span>
-                    <Indicator className='vp-menu__indicator' />
-                  </span>
-                  <ClickAwayListener 
-                    onClickAway={(isMobile ? handleClose : () => {})} 
-                    mouseEvent={false}
-                  >
-                    <div 
-                      id={`submenupoints-${index}`}
-                      className={`vp-dropdown${Boolean(anchorEl && anchorEl[index]) ? ` vp-dropdown--active` : ``}`}
-                      onMouseLeave={handleClose}
-                    >
-                      <ul className='vp-menu__sublist'>
-                        {menupoint.children?.map((subMenupoint, subIndex) =>
-                          <li 
-                            key={subIndex}
-                            onClick={handleClose} 
-                            className='vp-menu__subitem'
-                          >
-                            <VpMenuLink {...subMenupoint} />
-                          </li>
-                        )}
-                      </ul>
-                    </div>
-                  </ClickAwayListener>
-                </div>
-              :
-                <VpMenuLink {...menupoint} />
-              }
+            <li key={index} className='vp-menu__item'>   
+              <VpMenuLink
+                {...menupoint}
+              />
             </li>
           )}
-          {isMobile && 
-            <li key={`x`} className='vp-menu__item'>
-              {menuItems.filter(m => m.children).map((menupoint, index) =>
-                <ul key={index} className='vp-menu__sublist'>
-                  {menupoint.children?.map((subMenupoint, subIndex) =>
-                    <li 
-                      key={subIndex}
-                      onClick={handleClose} 
-                      className='vp-menu__subitem'
-                    >
-                      <VpMenuLink {...subMenupoint} />
-                    </li>
-                  )}
-                </ul>
-              )}
-            </li>
-          }
         </ul>
       </div>
-    </Fragment>
+    </MenuContext.Provider>
   );
 }
 
