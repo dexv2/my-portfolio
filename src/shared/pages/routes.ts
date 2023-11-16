@@ -12,7 +12,7 @@ export const Routes = {
 export const ExternalRoutes = {
   Menu: {
     Swap: `https://dex-aggregator-eight.vercel.app/#/`,
-    Perpetual: `https://perp.matrix-labs.xyz/`,
+    Perpetual: `https://app.nftperp.xyz/trade/bayc/`,
     Escrow: `https://github.com/dexv2/escrow-payment/`,
     Cv: `https://drive.google.com/file/d/1m8L2JsxemTD6UtNkeemRTXxiBdNLq7N6/view?usp=sharing`
   },

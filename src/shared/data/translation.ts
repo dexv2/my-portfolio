@@ -22,7 +22,7 @@ export const Translation = {
     },
     projects: {
       swap: `MATRIX SWAP`,
-      perp: `MATRIX PERP`,
+      perp: `NFT PERP`,
       escrow: `ESCROW PAYMENT`
     },
     menupoint: {
@@ -50,9 +50,9 @@ export const Translation = {
           action: `Enter DEX Aggregator`,
         },
         perp: {
-          title: `MatrixPerp`,
-          description: `Start trading derivatives on Polygon mainnet.`,
-          action: `Trade on Mainnet`,
+          title: `NFTPerp`,
+          description: `Long or short NFTs on Arbitrum mainnet (v2 Upcoming).`,
+          action: `Start To Trade`,
         },
         escrow: {
           title: `EscrowPayment`,
