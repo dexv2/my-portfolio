@@ -56,26 +56,25 @@ $color_potionBlue: hsl(195, 55%, 26%);
 $color_potionBlueish: hsl(194, 57%, 18%);
 $color_deelBlue: hsl(195, 15%, 18%);
 $color_deelBlueish: hsl(194, 11%, 24%);
-$color_shadedBlue: hsl(202, 48%, 16%);
 $color_darkGreen: hsl(132, 44%, 11%);
-$color_yellowGreen: hsl(123, 90%, 32%); // 0BB913
-$color_yellowishGreen: hsl(123, 89%, 38%); // 0BB913
-$color_veryGreen: hsl(123, 72%, 56%); // #3EE046
-$color_cyanGreen: hsl(139, 89%, 44%); // #0CD44B
-$color_cyanishGreen: hsl(137, 98%, 54%); // #14FD55
-$color_lightBlue: hsl(176, 88%, 41%);
-$color_lightishBlue: hsl(176, 85%, 51%); // #1AECDF => 
-$color_featherBlue: hsl(177, 86%, 44%);
+$color_shadedBlue: hsl(218, 48%, 16%);
 
-$color_shadedBlueRevised: hsl(218, 48%, 16%);
-$color_yellowGreenPlus143: hsl(266, 90%, 32%);
-$color_yellowishGreenPlus143: hsl(266, 89%, 38%);
-$color_veryGreenPlus143: hsl(266, 72%, 56%);
-$color_cyanGreenPlus143: hsl(282, 89%, 44%);
-$color_cyanishGreenPlus143: hsl(280, 98%, 54%);
-$color_lightBluePlus143: hsl(319, 88%, 41%);
-$color_lightishBluePlus143: hsl(319, 85%, 51%);
-$color_featherBluePlus143: hsl(320, 86%, 44%);
+$color_darkPurple1: hsl(266, 90%, 32%);
+$color_darkPurple2: hsl(266, 89%, 38%);
+$color_purple1: hsl(266, 72%, 56%);
+$color_purple2: hsl(282, 89%, 44%);
+$color_purple3: hsl(280, 98%, 54%);
+$color_purple4: hsl(269, 85%, 50%);
+$color_purple5: hsl(277, 72%, 56%);
+$color_purple6: hsl(286, 89%, 38%);
+$color_magenta1: hsl(319, 88%, 41%);
+$color_magenta2: hsl(319, 85%, 51%);
+$color_magenta3: hsl(320, 86%, 44%);
+$color_pink1: hsl(297, 83%, 58%);
+$color_pink2: hsl(303, 89%, 44%);
+$color_pink3: hsl(308, 79%, 49%);
+$color_pink4: hsl(304, 98%, 54%);
+$color_pink5: hsl(314, 85%, 51%);
 
 $color_whiteBlue: hsl(194, 41%, 95%);
 $color_steelGrey: hsl(166, 8%, 40%);
@@ -86,14 +85,6 @@ $color_featherGrey: hsla(234, 17%, 43%, 1);
 $color_powderGrey: rgb(228, 236, 233);
 $color_silverWhite: hsla(214, 17%, 78%, 1);
 $color_pureWhite: hsla(0, 0%, 100%, 1);
-$color_e43ded: hsl(297, 83%, 58%);
-$color_d40cca: hsl(303, 89%, 44%);
-$color_df1ac5: hsl(308, 79%, 49%);
-$color_a23ee0: hsl(277, 72%, 56%);
-$color_7c14ec: hsl(269, 85%, 50%);
-$color_900bb9: hsl(286, 89%, 38%);
-$color_fd14ed: hsl(304, 98%, 54%);
-$color_ec1abb: hsl(314, 85%, 51%);
 
 $color_blog_category_1: hsla(47, 92%, 55%, 1);
 $color_blog_category_2: hsla(14, 87%, 62%, 1);
@@ -108,12 +99,12 @@ $ui_color_text_blog: $color_deelBlueish;
 $ui_color_text_blog_alt: $color_deelBlue;
 $ui_color_text_blog_note: $color_noteGrey;
 $ui_color_note: $color_ashGrey;
-$ui_color_link_hover: $color_lightBluePlus143;
+$ui_color_link_hover: $color_magenta1;
 $ui_color_body_bg: $color_deepBlack;
 $ui_color_body_bg_alt: $color_richBlack;
 $ui_color_body_bg_blog: $color_pureWhite;
 $ui_color_body_img_bg: $color_powderGrey;
-$ui_color_progress_bg: $color_cyanGreen;
+$ui_color_progress_bg: $color_purple2;
 $ui_color_spacer: $color_potionBlueish;
 $ui_color_spacer_blog: $color_cloudGrey;
 $ui_color_image_bg: $color_darkTeal;
@@ -122,7 +113,7 @@ $ui_color_input_bg: $color_pureWhite;
 $ui_color_dropdown: $color_whiteBlue;
 $ui_color_dropdown_hover_bg: color.adjust($color_blueishBlack, $alpha: -0.3);
 $ui_color_dropdown_arrow: $color_blueBlack;
-$ui_color_dialog_close: $color_veryGreenPlus143;
+$ui_color_dialog_close: $color_purple1;
 $ui_color_dialog_shadow: color.adjust($color_deepBlack, $alpha: -0.3);
 $ui_color_launch_panel_bg: color.adjust($color_deepTeal, $alpha: -0.3);
 $ui_color_launch_panel_box_bg: color.adjust($color_deepTeal, $alpha: -0.25);
@@ -133,32 +124,32 @@ $ui_color_cta_bg: color.adjust($color_blueishBlack, $alpha: -0.5);
 $ui_color_text_shadow: color.adjust($color_deepBlack, $alpha: -0.7);
 $ui_color_button_hover_bg: color.adjust($color_pureWhite, $alpha: -0.6);
 $ui_color_button_alt_hover_bg: color.adjust($color_pureWhite, $alpha: -0.8);
-$ui_color_block_shadow: color.adjust($color_veryGreenPlus143, $alpha: -0.7);
-$ui_color_block_shadow_alt: color.adjust($color_veryGreenPlus143, $alpha: -0.9);
+$ui_color_block_shadow: color.adjust($color_purple1, $alpha: -0.7);
+$ui_color_block_shadow_alt: color.adjust($color_purple1, $alpha: -0.9);
 $ui_color_card_inner_shadow: color.adjust($color_featherGrey, $alpha: -0.7);
-$ui_color_card_inner_shadow_alt: color.adjust($color_df1ac5, $alpha: -0.85);
+$ui_color_card_inner_shadow_alt: color.adjust($color_pink3, $alpha: -0.85);
 $ui_color_scrollbar_bg: color.adjust($color_deepBlack, $alpha: -0.7);
-$ui_color_scrollbar_bg_hover: $color_yellowGreen;
+$ui_color_scrollbar_bg_hover: $color_darkPurple1;
 $ui_color_scrollbar_track_bg: color.adjust($color_deepBlack, $alpha: -0.95);
 $ui_color_roadmap_dot: $color_deepBlack;
-$ui_color_roadmap_arrow: $color_shadedBlueRevised;
-$ui_color_roadmap_group1: $color_cyanGreenPlus143;
-$ui_color_roadmap_group1_shadow: color.adjust($color_cyanGreenPlus143, $alpha: -0.5);
-$ui_color_roadmap_group2: $color_lightBluePlus143;
-$ui_color_roadmap_group2_shadow: color.adjust($color_lightBluePlus143, $alpha: -0.5);
+$ui_color_roadmap_arrow: $color_shadedBlue;
+$ui_color_roadmap_group1: $color_purple2;
+$ui_color_roadmap_group1_shadow: color.adjust($color_purple2, $alpha: -0.5);
+$ui_color_roadmap_group2: $color_magenta1;
+$ui_color_roadmap_group2_shadow: color.adjust($color_magenta1, $alpha: -0.5);
 
 @mixin BackgroundGradient($deg: 265deg) {
   background: linear-gradient($deg, 
-    $color_lightBluePlus143 4.66%, 
-    $color_cyanGreenPlus143 51.89%, 
-    $color_yellowGreenPlus143 98.62%
+    $color_magenta1 4.66%, 
+    $color_purple2 51.89%, 
+    $color_darkPurple1 98.62%
   );
 }
 
 @mixin BackgroundGradientSmall($deg: 135deg) {
   background: linear-gradient($deg, 
-  $color_cyanGreenPlus143 0%, 
-  $color_lightBluePlus143 100%, 
+  $color_purple2 0%, 
+  $color_magenta1 100%, 
   );
 }
 
@@ -198,37 +189,28 @@ $ui_color_roadmap_group2_shadow: color.adjust($color_lightBluePlus143, $alpha: -
 
 @mixin BorderGradient($deg: 280deg) {
   background: linear-gradient($deg,  
-    $color_lightishBluePlus143 16.14%, 
-    $color_cyanishGreenPlus143 49.3%,
-    $color_yellowishGreenPlus143 89.09%
+    $color_magenta2 16.14%, 
+    $color_purple3 49.3%,
+    $color_darkPurple2 89.09%
   );
 }
 
 @mixin TimelineGradient($deg: 90deg) {
   background: linear-gradient($deg, 
-  color.adjust($color_cyanGreenPlus143, $alpha: -1) 0, 
-  $color_cyanGreenPlus143 25%,
-  $color_lightBluePlus143 75%,
-  color.adjust($color_lightBluePlus143, $alpha: -1) 100%
-  );
-}
-
-@mixin ImageBorderGradient($deg: 115deg) {
-  background: linear-gradient($deg, 
-  $color_yellowishGreen 0%,
-  color.adjust($color_cyanishGreen, $alpha: -0.70) 30%,
-  color.adjust($color_cyanishGreen, $alpha: -0.90) 60%,
-  color.adjust($color_cyanishGreen, $alpha: -0.66) 100%
+  color.adjust($color_purple2, $alpha: -1) 0, 
+  $color_purple2 25%,
+  $color_magenta1 75%,
+  color.adjust($color_magenta1, $alpha: -1) 100%
   );
 }
 
 @mixin TextGradient($deg: 90deg) {
   display: inline-block;
-  background-color: $color_yellowishGreen;
+  background-color: $color_darkPurple2;
   background-image: linear-gradient($deg, 
-    $color_7c14ec 16.14%, 
-    $color_a23ee0 49.3%,
-    $color_df1ac5 89.09%
+    $color_purple4 16.14%, 
+    $color_purple5 49.3%,
+    $color_pink3 89.09%
   );
   background-size: 100%;
   -webkit-background-clip: text;
@@ -238,11 +220,11 @@ $ui_color_roadmap_group2_shadow: color.adjust($color_lightBluePlus143, $alpha: -
 }
 
 @mixin TextGradientSimple($deg: 90deg) {
-  background-color: $color_yellowishGreen;
+  background-color: $color_darkPurple2;
   background-image: linear-gradient($deg, 
-    $color_7c14ec 0%, 
-    $color_a23ee0 25%,
-    $color_df1ac5 100%
+    $color_purple4 0%, 
+    $color_purple5 25%,
+    $color_pink3 100%
   );
   background-size: 100%;
   -webkit-background-clip: text;
