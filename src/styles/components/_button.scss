@@ -10,7 +10,7 @@
   }
 }
 
-.ml-button {
+.vp-button {
 
   &.MuiButtonBase-root {
     @include BackgroundGradient;
@@ -137,7 +137,7 @@
   }
 }
 
-.ml-button-icon {
+.vp-button-icon {
 
   &.MuiButtonBase-root {
     padding: rem(10);

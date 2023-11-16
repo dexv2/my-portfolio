@@ -23,29 +23,29 @@ const MlMilestoneGroup = (group: MlMilestonesGroup) => {
   const groupIndex = group.index || 0;
   return (
     <div className={`
-      ml-roadmap__milestones__group
-      ${group.active === groupIndex + 1 ? ` ml-roadmap__milestones__group--prev-active` : ``}
-      ${group.active === group.index ? ` ml-roadmap__milestones__group--active` : ``}
+      vp-roadmap__milestones__group
+      ${group.active === groupIndex + 1 ? ` vp-roadmap__milestones__group--prev-active` : ``}
+      ${group.active === group.index ? ` vp-roadmap__milestones__group--active` : ``}
     `}>
-      <div className='ml-roadmap__milestones__mark'>
-        <h3 className='ml-roadmap__milestones__date ml-title--highlight'>
+      <div className='vp-roadmap__milestones__mark'>
+        <h3 className='vp-roadmap__milestones__date vp-title--highlight'>
           {group.groupName}
         </h3>
-        <div className='ml-roadmap__milestones__dot'></div>
+        <div className='vp-roadmap__milestones__dot'></div>
       </div>
-      <div className='ml-card ml-roadmap__milestones__card' {...animSlideUp()}>
-        <div className='ml-roadmap__milestones__title'>
-          <i className='ml-roadmap__milestones__status ml-roadmap__milestones__status--none'></i>
-          <div className='ml-roadmap__milestones__content'>
-            <h2 className='ml-roadmap__milestones__company ml-typo--highlight'>
+      <div className='vp-card vp-roadmap__milestones__card' {...animSlideUp()}>
+        <div className='vp-roadmap__milestones__title'>
+          <i className='vp-roadmap__milestones__status vp-roadmap__milestones__status--none'></i>
+          <div className='vp-roadmap__milestones__content'>
+            <h2 className='vp-roadmap__milestones__company vp-typo--highlight'>
               {group.groupTitle}
             </h2>
-            <h2 className='ml-roadmap__milestones__position'>
+            <h2 className='vp-roadmap__milestones__position'>
               {group.groupPosition}
             </h2>
           </div>
         </div>
-        <ul className='ml-roadmap__milestones__list'>
+        <ul className='vp-roadmap__milestones__list'>
           {group.groupItems.map((item, index) =>
             <MlMilestoneItem key={index} {...item} />
           )}
@@ -57,14 +57,14 @@ const MlMilestoneGroup = (group: MlMilestonesGroup) => {
 
 const MlMilestoneItem = (item: MlMilestonesItem) => {
   return (
-    <li className='ml-roadmap__milestones__item'>
+    <li className='vp-roadmap__milestones__item'>
       <i className={`
-        ml-roadmap__milestones__status
-        ${item.status === MilestoneStatus.Achieved ? ` ml-roadmap__milestones__status--active` : ``}
+        vp-roadmap__milestones__status
+        ${item.status === MilestoneStatus.Achieved ? ` vp-roadmap__milestones__status--active` : ``}
       `}></i>
       <span className={`
-        ml-roadmap__milestones__text
-        ${item.status === MilestoneStatus.Achieved ? ` ml-roadmap__milestones__text--active` : ``}
+        vp-roadmap__milestones__text
+        ${item.status === MilestoneStatus.Achieved ? ` vp-roadmap__milestones__text--active` : ``}
       `}>
         {item.name}
       </span>
@@ -104,54 +104,54 @@ function MlRoadmap({
   return (
     <>
       <div id='experience'></div>
-      <div className='ml-section ml-roadmap' data-aos='fade-in'>
-        <div className='ml-section__wrap ml-roadmap__content'>
-          <h2 className='ml-section__title ml-roadmap__title' {...animSlideOut()}>
+      <div className='vp-section vp-roadmap' data-aos='fade-in'>
+        <div className='vp-section__wrap vp-roadmap__content'>
+          <h2 className='vp-section__title vp-roadmap__title' {...animSlideOut()}>
             {Translation.en.section.roadmap.title}
           </h2>
-          <div className='ml-roadmap__steps'>
+          <div className='vp-roadmap__steps'>
             {Milestones.map((group, index) =>
               <div 
                 key={index}
                 onClick={() => goToGroup(index)}
                 className={`
-                  ml-roadmap__steps__item
-                  ${index === activeGroup ? ` ml-roadmap__steps__item--active` : ``}
+                  vp-roadmap__steps__item
+                  ${index === activeGroup ? ` vp-roadmap__steps__item--active` : ``}
                 `}
               >
-                <div className='ml-roadmap__steps__item__bullet'></div>
+                <div className='vp-roadmap__steps__item__bullet'></div>
               </div>
             )}
           </div>
-          <div className='ml-roadmap__wrap'>
-            <div className='ml-roadmap__timeline'></div>
-            <div className='ml-roadmap__milestones'>
-              <div className='ml-roadmap__controls'>
+          <div className='vp-roadmap__wrap'>
+            <div className='vp-roadmap__timeline'></div>
+            <div className='vp-roadmap__milestones'>
+              <div className='vp-roadmap__controls'>
                 <div className={`
-                  ml-roadmap__controls__step 
-                  ml-roadmap__controls__step--prev
-                  ${activeGroup >= 1 ? `` : ` ml-roadmap__controls__step--disabled`}
+                  vp-roadmap__controls__step 
+                  vp-roadmap__controls__step--prev
+                  ${activeGroup >= 1 ? `` : ` vp-roadmap__controls__step--disabled`}
                 `}>
                   <ButtonBase 
-                    className='ml-button-icon ml-button-icon--flip' 
+                    className='vp-button-icon vp-button-icon--flip' 
                     children={<ArrowForwardIos />}
                     onClick={(e) => goToPrevGroup(e)}
                   />
                 </div>
                 <div className={`
-                  ml-roadmap__controls__step 
-                  ml-roadmap__controls__step--next
-                  ${activeGroup < Milestones.length - 1 ? `` : ` ml-roadmap__controls__step--disabled`}
+                  vp-roadmap__controls__step 
+                  vp-roadmap__controls__step--next
+                  ${activeGroup < Milestones.length - 1 ? `` : ` vp-roadmap__controls__step--disabled`}
                 `}>
                   <ButtonBase 
-                    className='ml-button-icon' 
+                    className='vp-button-icon' 
                     children={<ArrowForwardIos />}
                     onClick={(e) => goToNextGroup(e)}
                   />
                 </div>
               </div>
               <div 
-                className='ml-roadmap__milestones__group-list' 
+                className='vp-roadmap__milestones__group-list' 
                 style={{right: `${(activeGroup - (desktopOrBigger ? 1 : 0)) * (desktopOrBigger ? 50 : 100)}%` }}
               >
                 {Milestones.map((group, index) =>

@@ -41,24 +41,24 @@ function MlCommunity({
   ...props 
 }: MlCommunityProps): ReactElement {
   return (
-    <div id='connect' className='ml-section ml-community' data-aos='fade-in'>
-      <div className='ml-section__wrap ml-community__content'>
-        <h2 className='ml-section__title ml-community__title' {...animSlideOut()}>
+    <div id='connect' className='vp-section vp-community' data-aos='fade-in'>
+      <div className='vp-section__wrap vp-community__content'>
+        <h2 className='vp-section__title vp-community__title' {...animSlideOut()}>
           {Translation.en.section.community.title}
         </h2>
-        <div className='ml-community__list-container'>
-          <ul className='ml-community__list'>
+        <div className='vp-community__list-container'>
+          <ul className='vp-community__list'>
             {communityList.map((communityItem, index) => 
-              <li key={index} className='ml-community__item' {...animSlideUp()}>
-                <a href={communityItem.link} target='_blank' rel='noopener noreferrer' className='ml-card ml-community__card'>
-                  <i className={`ml-icon ml-community__item__icon ml-community__item__icon--${communityItem.name.toLowerCase()}`} {...animSlideOut()}>
-                    <span className='ml-community__item__icon__gradient-border'></span>
+              <li key={index} className='vp-community__item' {...animSlideUp()}>
+                <a href={communityItem.link} target='_blank' rel='noopener noreferrer' className='vp-card vp-community__card'>
+                  <i className={`vp-icon vp-community__item__icon vp-community__item__icon--${communityItem.name.toLowerCase()}`} {...animSlideOut()}>
+                    <span className='vp-community__item__icon__gradient-border'></span>
                     {communityItem.icon}
                   </i>
-                  <h3 className='ml-community__item__title ml-typo--highlight'>
+                  <h3 className='vp-community__item__title vp-typo--highlight'>
                     {communityItem.name}
                   </h3>
-                  <p className='ml-community__item__description'>
+                  <p className='vp-community__item__description'>
                     {communityItem.description}
                   </p>
                 </a>

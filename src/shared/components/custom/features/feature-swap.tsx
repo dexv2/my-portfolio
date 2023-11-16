@@ -19,17 +19,17 @@ function SkillDescription() {
 
 function MlFeatureSwap(): ReactElement {
   return (
-    <div className='ml-section ml-features ml-feature-swap' data-aos='fade-in'>
-      <div className='ml-section__wrap ml-features__content'>
-        <div className='ml-features__box' {...animSlideUp()}>
-          <h2 className='ml-section__title ml-features__title' {...animSlideOut()}>
+    <div className='vp-section vp-features vp-feature-swap' data-aos='fade-in'>
+      <div className='vp-section__wrap vp-features__content'>
+        <div className='vp-features__box' {...animSlideUp()}>
+          <h2 className='vp-section__title vp-features__title' {...animSlideOut()}>
             {Translation.en.section.skills.blockchain.title}
           </h2>
-          <p className='ml-features__description'>
+          <p className='vp-features__description'>
             <SkillDescription />
           </p>
         </div>
-        <div className='ml-features__visual' {...animFadeIn()}>
+        <div className='vp-features__visual' {...animFadeIn()}>
           <SkillBlockchain />
         </div>
       </div>

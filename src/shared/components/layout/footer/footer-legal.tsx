@@ -7,8 +7,8 @@ function MlFooterLegal(): ReactElement {
 
   return (
     <Fragment>
-      <div className='ml-footer-legal' {...animSlideDown()}>  
-        <p className='ml-footer-legal__copyright'>
+      <div className='vp-footer-legal' {...animSlideDown()}>  
+        <p className='vp-footer-legal__copyright'>
           {Translation.en.footer.copyright} ©{currentYear} by {Translation.en.meta.title}. {Translation.en.footer.allRightsReserved}
         </p>
       </div>

@@ -12,15 +12,15 @@ function MlVision({
   return (
     <>
       <div id='about'></div>
-      <div className='ml-section ml-vision' data-aos='fade-in'>
-        <div className='ml-section__wrap ml-vision__content'>
-          <div className='ml-vision__card' {...animSlideUp()}>
-            <VisiondBg className='ml-vision__bg' />
-            <div className='ml-vision__content'>
-              <h2 className='ml-typo--highlight ml-vision__title'>
+      <div className='vp-section vp-vision' data-aos='fade-in'>
+        <div className='vp-section__wrap vp-vision__content'>
+          <div className='vp-vision__card' {...animSlideUp()}>
+            <VisiondBg className='vp-vision__bg' />
+            <div className='vp-vision__content'>
+              <h2 className='vp-typo--highlight vp-vision__title'>
                 {Translation.en.section.about.title}
               </h2>
-              <p className='ml-vision__text' {...animSlideOut()}>
+              <p className='vp-vision__text' {...animSlideOut()}>
                 {Translation.en.section.about.description}
               </p>
             </div>

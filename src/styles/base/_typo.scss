@@ -6,7 +6,7 @@ body * {
     font-family: '#{map-get($typo, "font")}';
 }
 
-.ml-typo {
+.vp-typo {
 
     &--highlight,
     &--highlight * {
@@ -16,7 +16,7 @@ body * {
     }
 }
 
-.ml-title {
+.vp-title {
 
     &--highlight,
     &--highlight * {

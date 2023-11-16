@@ -22,19 +22,19 @@ export type MlAppItem = {
 
 const MlApp = ({index = 0, ...item}: MlAppItem) => {
   return (
-    <li className='ml-apps__item' {...animSlideUp()}>
-      <div className='ml-card ml-apps__card' onClick={item.actionFunction}>
-        <i className='ml-apps__item__icon' {...animSlideOut()}>
+    <li className='vp-apps__item' {...animSlideUp()}>
+      <div className='vp-card vp-apps__card' onClick={item.actionFunction}>
+        <i className='vp-apps__item__icon' {...animSlideOut()}>
           {item.icon}
         </i>
-        <i className='ml-apps__item__logo' title={item.name} aria-label={item.name}>
+        <i className='vp-apps__item__logo' title={item.name} aria-label={item.name}>
           {item.logo}
         </i>
-        <p className='ml-apps__item__description'>
+        <p className='vp-apps__item__description'>
           {item.description}
         </p>
         <ButtonBase 
-          className={`ml-button ml-button--small ml-apps__item__action${!item.active ? ` ml-button--disable` : ``}`}
+          className={`vp-button vp-button--small vp-apps__item__action${!item.active ? ` vp-button--disable` : ``}`}
           children={item.actionText}
           onClick={item.actionFunction}
         />
@@ -92,12 +92,12 @@ function MlApps({
   return (
     <>
       <div id='projects'></div>
-      <div className='ml-section ml-apps' data-aos='fade-in'>
-        <div className='ml-section__wrap ml-apps__content'>
-          <h2 className='ml-section__title ml-apps__title' {...animSlideOut()}>
+      <div className='vp-section vp-apps' data-aos='fade-in'>
+        <div className='vp-section__wrap vp-apps__content'>
+          <h2 className='vp-section__title vp-apps__title' {...animSlideOut()}>
             {Translation.en.section.apps.title}
           </h2>
-          <ul className='ml-apps__list'>
+          <ul className='vp-apps__list'>
             {appList.map((appItem, index) => 
               <MlApp key={index} index={index} {...appItem} />
             )}
@@ -113,7 +113,7 @@ function MlAppTitle(props: {content: string}) {
   return (
     <div className='title-container'>
       {title.map((t, i) => (
-        <span key={i} className='ml-title--card'>{t}</span>
+        <span key={i} className='vp-title--card'>{t}</span>
       ))}
     </div>
   );

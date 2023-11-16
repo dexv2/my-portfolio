@@ -16,19 +16,19 @@ function MlHeader(): ReactElement {
   });
 
   const isSticky = (e: Event) => {
-    const header = document.querySelector('.ml-header');
+    const header = document.querySelector('.vp-header');
     const scrollTop = window.scrollY;
     if (header) {
       if (scrollTop > 20) {
-        header.classList.add('ml-header--sticky')
+        header.classList.add('vp-header--sticky')
       } else {
-        header.classList.remove('ml-header--sticky');
+        header.classList.remove('vp-header--sticky');
       } 
 
       if (scrollTop > 350) {
-        header.classList.add('ml-header--sticky--heading')
+        header.classList.add('vp-header--sticky--heading')
       } else {
-        header.classList.remove('ml-header--sticky--heading');
+        header.classList.remove('vp-header--sticky--heading');
       } 
     }
   };
@@ -38,32 +38,32 @@ function MlHeader(): ReactElement {
   }
 
   return (
-    <div className='ml-section ml-header'>
-      <div className='ml-header__bg'>
-        <div className='ml-section__wrap ml-header__content'>
-          <div className='ml-header__logo'>
+    <div className='vp-section vp-header'>
+      <div className='vp-header__bg'>
+        <div className='vp-section__wrap vp-header__content'>
+          <div className='vp-header__logo'>
             <Link href={Routes.Menu.Home}>
-              <div className='ml-header__logo__box'>
-                <VLogo className='ml-header__logo__svg ml-header__logo__svg--icon' aria-label={Translation.en.meta.title} />
-                <span className='ml-header__logo__no-width'>
-                  <span className='ml-header__logo__hide-narrow ml-header__logo__hide-narrow--portfolio'>
-                    <h1 className='ml-title--heading ml-header__logo__svg--text-my'>{Translation.en.label.my}</h1>
-                    <h1 className='ml-title--heading ml-header__logo__svg--text-portfolio'>{Translation.en.label.portfolio}</h1>
+              <div className='vp-header__logo__box'>
+                <VLogo className='vp-header__logo__svg vp-header__logo__svg--icon' aria-label={Translation.en.meta.title} />
+                <span className='vp-header__logo__no-width'>
+                  <span className='vp-header__logo__hide-narrow vp-header__logo__hide-narrow--portfolio'>
+                    <h1 className='vp-title--heading vp-header__logo__svg--text-my'>{Translation.en.label.my}</h1>
+                    <h1 className='vp-title--heading vp-header__logo__svg--text-portfolio'>{Translation.en.label.portfolio}</h1>
                   </span>
                 </span>
-                <span className='ml-header__logo__hide-narrow ml-header__logo__hide-narrow--name'>
-                  <h1 className='ml-title--heading ml-header__logo__svg--text-vermont'>{Translation.en.label.fname}</h1>
-                  <h1 className='ml-title--heading ml-header__logo__svg--text-paguiligan'>{Translation.en.label.lname}</h1>
+                <span className='vp-header__logo__hide-narrow vp-header__logo__hide-narrow--name'>
+                  <h1 className='vp-title--heading vp-header__logo__svg--text-vermont'>{Translation.en.label.fname}</h1>
+                  <h1 className='vp-title--heading vp-header__logo__svg--text-paguiligan'>{Translation.en.label.lname}</h1>
                 </span>
               </div>
             </Link>
           </div>
-          <div className='ml-header__menu'{...animFadeIn()}>
+          <div className='vp-header__menu'{...animFadeIn()}>
             <MlMenu />
           </div>
-          <div className='ml-header__action'>
+          <div className='vp-header__action'>
             <ButtonBase 
-              className='ml-button ml-button--alt ml-button--small ml-button--launch' 
+              className='vp-button vp-button--alt vp-button--small vp-button--launch' 
               children={Translation.en.common.download}
               onClick={goToFile}
             />

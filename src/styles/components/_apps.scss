@@ -1,4 +1,4 @@
-.ml-apps {
+.vp-apps {
 
   &__content {
     margin: rem(19) auto rem(30);
@@ -79,11 +79,11 @@
   &__card {
     transition: all .15s ease 0s;
 
-    .ml-button {
+    .vp-button {
       transition: all .15s ease 0s;
     }
 
-    .ml-apps__item__icon {
+    .vp-apps__item__icon {
       transition: all .6s cubic-bezier(0.17,0.84,0.44,1) 0ms !important;
     }
 
@@ -91,10 +91,10 @@
       z-index: 2;
       filter: brightness(1.2);
 
-      .ml-button:not(.ml-button--disable) {
+      .vp-button:not(.vp-button--disable) {
         filter: brightness(.8);
       }
-      .ml-apps__item__icon {
+      .vp-apps__item__icon {
         transform: scale(1.15);
         transition: all .2s cubic-bezier(0.17,0.84,0.44,1) 0ms !important;
       }

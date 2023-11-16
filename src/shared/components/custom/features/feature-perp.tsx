@@ -19,17 +19,17 @@ function SkillDescription() {
 
 function MlFeaturePerp(): ReactElement {
   return (
-    <div id='skills' className='ml-section ml-features ml-features--right ml-feature-perp' data-aos='fade-in'>
-      <div className='ml-section__wrap ml-features__content'>
-        <div className='ml-features__box' {...animSlideUp()}>
-          <h2 className='ml-section__title ml-features__title' {...animSlideOut()}>
+    <div id='skills' className='vp-section vp-features vp-features--right vp-feature-perp' data-aos='fade-in'>
+      <div className='vp-section__wrap vp-features__content'>
+        <div className='vp-features__box' {...animSlideUp()}>
+          <h2 className='vp-section__title vp-features__title' {...animSlideOut()}>
             {Translation.en.section.skills.fullStack.title}
           </h2>
-          <p className='ml-features__description'>
+          <p className='vp-features__description'>
             <SkillDescription />
           </p>
         </div>
-        <div className='ml-features__visual' {...animFadeIn()}>
+        <div className='vp-features__visual' {...animFadeIn()}>
           <SkillFullStack />
         </div>
       </div>

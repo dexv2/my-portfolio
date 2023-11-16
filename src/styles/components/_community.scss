@@ -1,4 +1,4 @@
-.ml-community {
+.vp-community {
 
   &__content {
     margin: rem(30) auto;
@@ -142,7 +142,7 @@
     text-decoration: none;
     transition: all .15s ease 0s;
 
-    .ml-icon {
+    .vp-icon {
       transition: all .6s cubic-bezier(0.17,0.84,0.44,1) 0ms !important;
     }
 
@@ -150,7 +150,7 @@
       z-index: 2;
       filter: brightness(1.2);
 
-      .ml-icon {
+      .vp-icon {
         transform: scale(1.1);
         transition: all .2s cubic-bezier(0.17,0.84,0.44,1) 0ms !important;
       }

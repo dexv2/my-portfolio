@@ -1,4 +1,4 @@
-.ml-header {
+.vp-header {
   $header: &;
   position: absolute;
   left: 0;
@@ -112,8 +112,6 @@
         display: inline-block;
         opacity: 0;
         transform: translateX(rem(-5));
-        // padding: 0 0 0 rem(17);
-        // transition: all .3s ease 0s;
       }
 
       &--text-paguiligan {
@@ -121,7 +119,6 @@
         opacity: 0;
         padding: 0 0 0 rem(7);
         transform: translateX(rem(-30));
-        // transition: transform .2s ease-out .05s, opacity .15s ease-out .1s;
       }
     }
   }
@@ -175,13 +172,11 @@
     
           &--text-my {
             opacity: 0;
-            // display: none;
             transform: translateX(rem(-5));
           }
 
           &--text-portfolio {
             opacity: 0;
-            // display: none;
             transform: translateX(rem(-30));
           }
     

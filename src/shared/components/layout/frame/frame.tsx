@@ -40,9 +40,9 @@ function MlFrame({
         <meta name='twitter:card' content='summary' />
         <meta name='twitter:creator' content={title} />
       </Head>
-      <div className={`ml-layout ${layout ? `ml-layout--${layout}` : ``}`}>
+      <div className={`vp-layout ${layout ? `vp-layout--${layout}` : ``}`}>
         <MlHeader />
-        <main className='ml-layout__content'>
+        <main className='vp-layout__content'>
           {props.children}
         </main>
         <MlFooter />

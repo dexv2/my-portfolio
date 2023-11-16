@@ -8,7 +8,7 @@ import MlFeatureSecurity from './feature-security';
 export type MlFeaturesProps = { }
 
 export function Em({s}: {s: string}) {
-  return <span className='ml-features--emphasized'>{s}</span>
+  return <span className='vp-features--emphasized'>{s}</span>
 }
 
 function MlFeatures({ 

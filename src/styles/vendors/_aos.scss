@@ -1,4 +1,4 @@
-[data-aos='ml-fade-up'] {
+[data-aos='vp-fade-up'] {
   opacity: 0;
   transform: translateY(rem(30));
   transition-property: transform, opacity;
@@ -9,7 +9,7 @@
   }
 }
 
-[data-aos='ml-slide-up'] {
+[data-aos='vp-slide-up'] {
   visibility: visible;
   transform: translateY(rem(30));
   transition-property: transform;
@@ -19,7 +19,7 @@
   }
 }
 
-[data-aos='ml-slide-out'] {
+[data-aos='vp-slide-out'] {
   visibility: visible;
   transform: scale(1.2);
   transition-property: transform;

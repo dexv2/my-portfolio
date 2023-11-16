@@ -1,4 +1,4 @@
-.ml-footer {
+.vp-footer {
   min-height: rem(100);
 
   &::before {
@@ -29,14 +29,14 @@
   }
 }
 
-.ml-footer-bottom {
+.vp-footer-bottom {
 
   &__content {
     
   }
 }
 
-.ml-footer-menu {
+.vp-footer-menu {
   $footerMenu: &;
   display: flex;
   justify-content: center;
@@ -171,7 +171,7 @@
   }
 }
 
-.ml-footer-subscription {
+.vp-footer-subscription {
   position: relative;
   display: flex;
   justify-content: center;
@@ -266,7 +266,7 @@
   }
 }
 
-.ml-footer-legal {
+.vp-footer-legal {
   padding: rem(20) 0 rem(22);
   min-height: rem(92);
   font-size: rem(14);

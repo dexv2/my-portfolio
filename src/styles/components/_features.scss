@@ -1,4 +1,4 @@
-.ml-features {
+.vp-features {
   $feature: &;
 
   &__content {
@@ -136,64 +136,10 @@
       }
     }
   }
-
-
-  // &__title {
-  //   margin: 0 auto;
-  //   max-width: rem(860);
-  // }
-
-  // &__list {
-  //   display: flex;
-  //   justify-content: space-between;
-  //   gap: rem(25);
-  //   margin: rem(60) 0;
-  // }
-
-  // &__item {
-  //   flex: 1;
-  //   max-width: rem(365);
-
-  //   &__icon {
-  //     margin: 0 rem(-40);
-  //     height: rem(190);
-  //   }
-
-  //   &__title {
-  //     @include TextGradient;
-  //     margin: 0 rem(-10);
-  //     line-height: rem(30);
-  //     font-size: rem(22);
-  //   }
-
-  //   &__description {
-  //     margin: rem(15) 0 0;
-  //     color: $ui_color_text_alt;
-  //     line-height: rem(26);
-  //     font-size: rem(16);
-  //   }
-  // }
-
-  // &__card {
-  //   padding: rem(10) rem(32) rem(50);
-  // }
 }
+.vp-feature-security {
 
-.ml-feature-swap {
-
-}
-
-.ml-feature-perp {
-
-}
-
-.ml-feature-zap {
-
-}
-
-.ml-feature-security {
-
-  .ml-features__visual > * {
+  .vp-features__visual > * {
     max-width: rem(428);
   }
 }

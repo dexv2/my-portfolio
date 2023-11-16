@@ -56,30 +56,30 @@ const MlMenuLink = (menupoint: MlMenuItemsProps) => {
     <Fragment>
       {menupoint.link && menupoint.linkType === `internal` ?
         <Link href={menupoint.link as Url}>
-          <span className='ml-link ml-menu__link'>
+          <span className='vp-link vp-menu__link'>
             {menupoint.icon && 
-              <i className={`ml-menu__icon ml-menu__icon--${menupoint.alias}`}>
+              <i className={`vp-menu__icon vp-menu__icon--${menupoint.alias}`}>
                 {menupoint.icon}
               </i>
             } 
-            <span className='ml-menu__text'>
+            <span className='vp-menu__text'>
               {menupoint.title}
             </span>
           </span>
         </Link>
       :
         <a 
-          className='ml-link ml-menu__link'
+          className='vp-link vp-menu__link'
           href={menupoint.link as string} 
           rel='noopener noreferrer'
           target='_blank'
         >
           {menupoint.icon && 
-            <i className={`ml-icon ml-menu__icon ml-menu__icon--${menupoint.alias}`}>
+            <i className={`vp-icon vp-menu__icon vp-menu__icon--${menupoint.alias}`}>
               {menupoint.icon}
             </i>
           } 
-          <span className='ml-menu__text'>
+          <span className='vp-menu__text'>
             {menupoint.title}
           </span>
         </a>
@@ -103,7 +103,7 @@ function MlMenu(): ReactElement {
     <Fragment>
       {isMobile &&
         <div 
-          className={`ml-menu-button${isMenuActive ? ` ml-menu-button--active` : ``}`}
+          className={`vp-menu-button${isMenuActive ? ` vp-menu-button--active` : ``}`}
           onClick={() => setMenuActive(!isMenuActive)}
         >
           <span></span>
@@ -112,24 +112,24 @@ function MlMenu(): ReactElement {
           <span></span>
         </div>
       }
-      <div className={`ml-menu${isMobile ? ` ml-compact-dialog` : ``}${isMenuActive ? ` ml-compact-dialog--active` : ``}`}>
-        <ul className={`ml-menu__list${isMobile ? ` ml-compact-dialog__content` : ``}`}>
+      <div className={`vp-menu${isMobile ? ` vp-compact-dialog` : ``}${isMenuActive ? ` vp-compact-dialog--active` : ``}`}>
+        <ul className={`vp-menu__list${isMobile ? ` vp-compact-dialog__content` : ``}`}>
           {menuItems.map((menupoint, index) =>
-            <li key={index} className={`ml-menu__item${menupoint.title === Translation.en.menupoint.connect ? ` ml-helper__only-desktop` : ``}`}>   
+            <li key={index} className={`vp-menu__item${menupoint.title === Translation.en.menupoint.connect ? ` vp-helper__only-desktop` : ``}`}>   
               {menupoint.children && !isMobile ? 
                 <div {...(
                   isMobile ? 
                   {onClick: (e) => handleMouseOver(index, e)} :
                   {onMouseOver: (e) => handleMouseOver(index, e)}
                 )}>
-                  <span className='ml-menu__link' {...(
+                  <span className='vp-menu__link' {...(
                     !isMobile && 
                     {onMouseLeave: handleClose}
                   )}>
-                    <span className='ml-menu__text'>
+                    <span className='vp-menu__text'>
                       {menupoint.title}
                     </span>
-                    <Indicator className='ml-menu__indicator' />
+                    <Indicator className='vp-menu__indicator' />
                   </span>
                   <ClickAwayListener 
                     onClickAway={(isMobile ? handleClose : () => {})} 
@@ -137,15 +137,15 @@ function MlMenu(): ReactElement {
                   >
                     <div 
                       id={`submenupoints-${index}`}
-                      className={`ml-dropdown${Boolean(anchorEl && anchorEl[index]) ? ` ml-dropdown--active` : ``}`}
+                      className={`vp-dropdown${Boolean(anchorEl && anchorEl[index]) ? ` vp-dropdown--active` : ``}`}
                       onMouseLeave={handleClose}
                     >
-                      <ul className='ml-menu__sublist'>
+                      <ul className='vp-menu__sublist'>
                         {menupoint.children?.map((subMenupoint, subIndex) =>
                           <li 
                             key={subIndex}
                             onClick={handleClose} 
-                            className='ml-menu__subitem'
+                            className='vp-menu__subitem'
                           >
                             <MlMenuLink {...subMenupoint} />
                           </li>
@@ -160,14 +160,14 @@ function MlMenu(): ReactElement {
             </li>
           )}
           {isMobile && 
-            <li key={`x`} className='ml-menu__item'>
+            <li key={`x`} className='vp-menu__item'>
               {menuItems.filter(m => m.children).map((menupoint, index) =>
-                <ul key={index} className='ml-menu__sublist'>
+                <ul key={index} className='vp-menu__sublist'>
                   {menupoint.children?.map((subMenupoint, subIndex) =>
                     <li 
                       key={subIndex}
                       onClick={handleClose} 
-                      className='ml-menu__subitem'
+                      className='vp-menu__subitem'
                     >
                       <MlMenuLink {...subMenupoint} />
                     </li>
