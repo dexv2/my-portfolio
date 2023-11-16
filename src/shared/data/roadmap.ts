@@ -37,7 +37,7 @@ export const Milestones: VpMilestonesGroup[] = [
   },
   {
     groupName: `07/2021 - Present`,
-    groupTitle: `Joined NFTPERP`,
+    groupTitle: `Joined nftperp`,
     groupPosition: `as Full Stack Blockchain Engineer`,
     groupItems: [
       { name: Translation.en.section.roadmap.nftperp.item1, status: MilestoneStatus.Achieved },
